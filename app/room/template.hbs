@@ -1,0 +1,11 @@
+<h2>This is the Main room</h2>
+{{#each model as |post|}}
+<p>{{post.data.content}}</p>
+{{/each}}
+
+
+<form {{action postMessage newContent on="submit"}}>
+  <h4 class="text-heading">Say Something!</h4>
+  {{textarea class="new message" value=newContent}}
+  <button>POST</button>
+</form>
