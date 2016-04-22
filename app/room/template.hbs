@@ -1,5 +1,7 @@
 <h2>This is the Main room</h2>
 {{#each model as |post|}}
+<span>{{post.createdAt}}</span>
+<span>{{post.chatter.username}}</span>
 <p>{{post.content}}</p>
 {{/each}}
 
