@@ -1,0 +1,26 @@
+<h2>this is the register page</h2>
+<ul>
+{{#each model as |chatter|}}
+<li>{{chatter.username}}</li>
+{{/each}}
+</ul>
+<form {{action registerChatter model on="submit"}}>
+
+  <p class="form-field">
+      <label>Email</label>
+      {{input value=model.email}}
+    </p>
+
+    <p class="form-field">
+      <label>Username</label>
+      {{input value=model.username}}
+    </p>
+
+    <p class="form-field">
+      <label>Password</label>
+      {{input type="password" value=model.password}}
+    </p>
+<button>submit</button>
+</form>
+
+{{outlet}}
